@@ -1,0 +1,45 @@
+.footer {
+  padding-top: 42px;
+  .container {
+    border-top: 1px solid $black-light;
+    padding: 20px 0;
+  }
+}
+
+.made-by {
+  color: $grey;
+  a {
+    color: $orange;
+    transition: text-decoration 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    display: block;
+
+    &:last-child {
+      a {
+        border: none;
+      }
+    }
+  }
+
+  &__link {
+    line-height: 2.7273;
+    color: $orange;
+    padding: 0 4px;
+    border-right: 1px solid $black-light;
+    transition: text-decoration 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

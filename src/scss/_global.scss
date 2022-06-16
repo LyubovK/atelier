@@ -1,0 +1,162 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $white;
+  font-size: $font-size-global;
+  font-family: $font-family-general;
+  font-weight: 400;
+  line-height: $line-height;
+  background-color: $black;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  letter-spacing: 1px;
+  font-size: 70px;
+  line-height: 1.1428;
+  text-align: center;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 1.16;
+  color: $orange;
+  text-align: center;
+}
+
+h3 {
+  color: $white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.page-wrapper {
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  transition: all ease 0.3s;
+  @include breakpoint(xl) {
+    max-width: 1140px;
+  }
+  @include breakpoint(md) {
+    max-width: 760px;
+  }
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $orange;
+  line-height: 2;
+  color: $black;
+  padding: 14px 27px;
+  border: 1px solid $orange;
+  transition: color 0.3s ease, border 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    background: $black;
+    border-color: $orange;
+    color: $orange;
+  }
+  &_outline {
+    background: $black;
+    border-color: $orange;
+    color: $orange;
+
+    &:hover {
+      background: $orange;
+      color: $black;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  input {
+    padding: 17.5px 27px;
+    background: $black;
+    border: 1px solid $black-light;
+    outline: none;
+    color: $grey;
+    &::placeholder {
+      color: $grey;
+      opacity: 0.85;
+    }
+  }
+
+  .btn {
+    padding: 11px 0;
+  }
+}
+
+.small-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $grey;
+  text-align: center;
+
+  &_orange {
+    color: $orange;
+  }
+}
+
+.breakepoint-img {
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text_orange {
+  color: $orange;
+}

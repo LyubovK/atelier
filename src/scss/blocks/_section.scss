@@ -1,0 +1,213 @@
+.page-layout,
+.services,
+.breakepoint-img,
+.services,
+.social-block,
+.subscribe {
+  margin-top: 120px;
+}
+
+.slider {
+  min-height: 602px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .small-title {
+    padding-bottom: 15px;
+  }
+  .btn {
+    margin-top: 35px;
+  }
+}
+
+.page-layout {
+  h2 {
+    margin-bottom: 60px;
+  }
+  .row {
+    margin: 0 -10px;
+  }
+
+  &__card-holder {
+    width: calc(100% / 3);
+    padding: 10px;
+
+    @include breakpoint(xl) {
+      width: calc(100% / 2);
+    }
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+
+  .card {
+    padding: 40px;
+    border: 1px solid $black-light;
+
+    &__title {
+      font-size: 13px;
+      line-height: 1.7692;
+      text-transform: uppercase;
+    }
+
+    &__img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.services {
+  h2 {
+    margin-bottom: 60px;
+  }
+  &__card {
+    width: calc(100% / 3);
+    padding: 60px;
+    border: 1px solid $black-light;
+    text-align: left;
+    color: $grey;
+    @include breakpoint(xl) {
+      width: calc(100% / 2);
+    }
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+  &__h3 {
+    font-size: 24px;
+    line-height: 1.7692;
+    color: $orange;
+    text-align: left;
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 1.7333;
+    &_little {
+      font-size: 11px;
+    }
+  }
+}
+
+.social-block {
+  &__half {
+    display: flex;
+    transition: all ease-in-out 0.3s;
+    @include breakpoint(xl) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    transition: all ease-in-out 0.3s;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include breakpoint(xl) {
+      margin: 10px auto 40px;
+      padding: 60px 0;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.25;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      z-index: 1;
+    }
+  }
+
+  &__img {
+    position: relative;
+    &::after {
+      content: "";
+      background: url("/src/img/inst.png") no-repeat 50% 50%;
+      position: absolute;
+      left: 50%;
+      top: -30px;
+      width: 50px;
+      height: 50px;
+      transform: translateX(-50%);
+    }
+  }
+}
+.subscribe {
+  &__form-holder {
+    width: 35%;
+
+    @include breakpoint(md) {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 12px;
+    line-height: 2.3333;
+    color: $grey;
+    margin: 20px 0;
+  }
+}
+
+.form {
+  .btn {
+    margin-bottom: 32px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.4286;
+    color: $grey;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    display: block;
+    padding: 0 4px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid $black-light;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
